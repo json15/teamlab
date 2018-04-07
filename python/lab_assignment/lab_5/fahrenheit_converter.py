@@ -4,11 +4,11 @@
 #  no input, “변환하고 싶은 섭씨 온도를 입력해 주세요: ” 이라는 글자를 화면에 출력하고, 입력된 값을 실수로 변환해줍니다.
 # 사용자는 실수값 형태로만 입력한다고 가정합니다.
 # output = float type, celsius_value
-
-
 def input_celsius_value():
-    celsius_value = float(input('변환하고 싶은 섭씨 온도를 입력해 주세요:'))
-    return celsius_value
+
+    result = float(input('변환하고 싶은 섭씨 온도를 입력해 주세요: '))
+
+    return result
 
 
 # convert_celsius_fahrenheit function
@@ -18,14 +18,19 @@ def input_celsius_value():
 # output = Float Type의 섭씨값이 화씨값으로 변한된 값
 
 def convert_celsius_fahrenheit(celsius_value):
-    fahrenheit_value = float(((9/5) * celsius_value) + 32)
-    return fahrenheit_value
+    result = ((9 / 5) * celsius_value) + 32
+
+    return result
+
 
 # print_fahrenheit_value
 # input float type의 celsius_value, float type의 fahrenheit_value
 # 입력 받은 celsius_value와 fahrenheit_value를 화면상에 출력해줍니다. 출력시 섭씨온도 :, 화씨온도 : 가 포함이 되어야 합니다.
+
+
 def print_fahrenheit_value(celsius_value, fahrenheit_value):
-    print('섭씨온도 : {0}, 화씨온도 : {1}'.format(celsius_value, fahrenheit_value))
+    print('섭씨온도 :{0}, 화씨온도 :{1}'.format(celsius_value, fahrenheit_value))
+
 
 def main():
     print("본 프로그램은 섭씨를 화씨로로 변환해주는 프로그램입니다")
@@ -34,7 +39,6 @@ def main():
     celsius_value = input_celsius_value()
     fahrenheit_value = convert_celsius_fahrenheit(celsius_value)
     print_fahrenheit_value(celsius_value, fahrenheit_value)
-
 
     # ======================================
     print("===========================")

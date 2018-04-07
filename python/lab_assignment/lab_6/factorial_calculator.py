@@ -3,24 +3,16 @@
 
 def is_positive_number(integer_str_value):
 
+    try:
+        int_value = int(integer_str_value)
+        if int_value > 0:
+            result = True
+        else:
+            result = False
+    except:
+        result = False
 
-# '''
-# Input:
-#   - integer_str_value : 숫자형태의 문자열 값
-# Output:
-#   - integer_str_value가 양수일 경우에는 True,
-#     integer로 변환이 안되거나, 0, 음수일 경우에는 flase
-# Examples:
-#   >>> import factorial_calculator as fc
-#   >>> fc.is_positive_number("100")
-#   True
-#   >>> fc.is_positive_number("0")
-#   False
-#   >>> fc.is_positive_number("-10")
-#   False
-#   >>> fc.is_positive_number("abc")
-#   False
-# '''
+    return result
 
 
 def get_factorial_value(integer_value):
@@ -38,8 +30,13 @@ def get_factorial_value(integer_value):
 #    5040
 # '''
 # ===Modify codes below=============
+    result = 1
+    for i in range(1, integer_value + 1):
+        result *= i
 
+    return result
 
+print(get_factorial_value(5))
 # ==================================
 
 

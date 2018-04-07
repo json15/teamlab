@@ -7,3 +7,18 @@ with open("i_have_a_dream.txt", "r") as my_file:
 print("Total Number of Characters :", len(contents))
 print("Total Number of Words:", len(word_list))
 print("Total Number of Lines :", len(line_list))
+
+
+word_set = set([i.upper() for i in word_list])
+print(len(word_set))
+
+for i in line_list:
+    if i is "":
+        line_list.remove(i)
+
+for i in contents:
+    if i is '':
+        contents.replace('\n','')
+    print(i)
+
+print(contents)
